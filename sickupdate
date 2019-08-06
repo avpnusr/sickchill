@@ -1,0 +1,12 @@
+#! /bin/bash
+
+/usr/bin/wget -q --no-check-certificate -O /tmp/srage "http://127.0.0.1:8081/home/"
+
+SHOWS=$(cat /tmp/srage | grep displayShow | awk -F "show=" '{print $2}' | cut -d \" -f1)
+
+for ID in $SHOWS; do
+
+/usr/bin/curl -k -s "http://127.0.0.1:8081/home/updateShow?show=$ID&force=1"
+sleep 35
+
+done
