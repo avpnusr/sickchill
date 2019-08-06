@@ -6,7 +6,7 @@ Image is created on TinkerBoard, Raspberry Pi, Rock64 for ARM based systems.
 
 Versions in latest image
 ---
-The image is based on the latest **[SickRage](https://sickrage.github.io/ "SickRage Homepage")** version from **[cytec](https://github.com/cytec/SickRage "cytec SickRage")** which is a version, optimized specially for german users. 
+The image is based on the latest **[SickChill](https://github.com/SickChill/SickChill "SickChill GitHub")** version. I only updated the settings, to not ignore the german releases (for convenience).
 
 On request, I will provide a version from the standard SickRage git.
 
@@ -29,5 +29,5 @@ docker run -d \
   -e GID=[Users GID] \
   -e TZ="Europe/Berlin" \
   -p 8081:8081 \
-  --restart=always avpnusr/sickpi
+  --restart=always avpnusr/sickchill
 ```
