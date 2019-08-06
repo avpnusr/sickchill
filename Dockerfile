@@ -6,7 +6,7 @@ ENV LANG='en_US.UTF-8' \
     TERM='xterm' \
     PYTHONIOENCODING='UTF-8'
 
-COPY ./start.sh ./sickupdate /
+COPY ./start.sh ./sickupdate ./__init__.py /
 
 RUN apk --update --no-cache add \
     git python py2-openssl tzdata unrar curl mediainfo nodejs libffi && \
@@ -18,8 +18,6 @@ RUN apk --update --no-cache add \
     rm -rf /tmp/* && \
     rm -rf /var/cache/apk/*
 
-COPY ./__init__.py /sickchill/sickbeard/
-
 VOLUME ["/data", "/incoming", "/media"]
 
 EXPOSE 8081
@@ -27,6 +25,4 @@ EXPOSE 8081
 HEALTHCHECK --interval=120s --timeout=15s --start-period=120s --retries=3 \
             CMD wget --no-check-certificate --quiet --spider 'http://localhost:8081' || exit 1
 
-WORKDIR /sickchill
-
-CMD ["/start.sh"]
+ENTRYPOINT [ "/bin/sh", "/start.sh" ]

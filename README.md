@@ -19,6 +19,7 @@ For **[/incoming/folder]**, you can use the volume, where the files will be stor
 For **[/media/folder]**, use the volume, where the postprocessed files will be stored.
 
 You can set the timezone for the container via environment-variable "TZ".
+You can activate support for german releases via the environment-variable "GERMAN".
 
 ```
 docker run -d \
@@ -28,6 +29,7 @@ docker run -d \
   -e UID=[Users UID] \
   -e GID=[Users GID] \
   -e TZ="Europe/Berlin" \
+  -e GERMAN=TRUE
   -p 8081:8081 \
   --restart=unless-stopped avpnusr/sickchill
 ```
