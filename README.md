@@ -29,5 +29,5 @@ docker run -d \
   -e GID=[Users GID] \
   -e TZ="Europe/Berlin" \
   -p 8081:8081 \
-  --restart=always avpnusr/sickchill
+  --restart=unless-stopped avpnusr/sickchill
 ```
