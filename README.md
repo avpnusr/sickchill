@@ -1,5 +1,5 @@
-![SickRage Logo](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/sickrage-banner.png)
-**SickRage in docker container (german version)**
+![SickRage Logo](https://user-images.githubusercontent.com/390379/47651259-f1be4000-db3f-11e8-895f-bae17d5ca467.png)
+**SickChill in docker container (german version)**
 ====
 Image is created in auto-build for x86 based systems.
 Image is created on TinkerBoard, Raspberry Pi, Rock64 for ARM based systems.
