@@ -2,7 +2,7 @@
 **SickChill in docker container (german version)**
 ====
 Image is created in auto-build for x86 based systems.
-Image is created on TinkerBoard, Raspberry Pi, Rock64 for ARM based systems.
+Image is created on TinkerBoard, Raspberry Pi, Rock64 or AWS for ARM based systems.
 
 Versions in latest image
 ---
@@ -31,5 +31,6 @@ docker run -d \
   -e TZ="Europe/Berlin" \
   -e GERMAN=TRUE
   -p 8081:8081 \
+  --name sickchill \
   --restart=unless-stopped avpnusr/sickchill
 ```
