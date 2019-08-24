@@ -29,7 +29,7 @@ docker run -d \
   -e UID=[Users UID] \
   -e GID=[Users GID] \
   -e TZ="Europe/Berlin" \
-  -e GERMAN=TRUE
+  -e GERMAN=true \
   -p 8081:8081 \
   --name sickchill \
   --restart=unless-stopped avpnusr/sickchill
