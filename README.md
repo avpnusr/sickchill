@@ -8,8 +8,6 @@ Versions in latest image
 ---
 The image is based on the latest **[SickChill](https://github.com/SickChill/SickChill "SickChill GitHub")** version. I only updated the settings, to not ignore the german releases (for convenience).
 
-On request, I will provide a version from the standard SickRage git.
-
 Start your container
 -----
 For **[/cfg+db/location]**, use the volume, where your config-file and the database from SickRage is stored.
