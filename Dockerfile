@@ -4,9 +4,10 @@ MAINTAINER avpnusr
 ENV LANG='en_US.UTF-8' \
     LANGUAGE='en_US.UTF-8' \
     TERM='xterm' \
-    PYTHONIOENCODING='UTF-8'
+    PYTHONIOENCODING='UTF-8' \
+    SCBRANCH='v2019.09.02-1'
 
-COPY ./start.sh ./sickupdate ./__init__.py /
+COPY ./start.sh ./__init__.py ./indexer_config.py ./showUpdater.py ./tvdb_api.py /
 
 RUN buildDeps="gcc python-dev openssl-dev libffi-dev musl-dev py2-pip" && \
     apk --update --no-cache add $buildDeps && \
@@ -14,10 +15,9 @@ RUN buildDeps="gcc python-dev openssl-dev libffi-dev musl-dev py2-pip" && \
     git python2 tzdata unrar curl nodejs && \
     pip install --upgrade pip --no-cache-dir && \
     pip install pyopenssl --no-cache-dir && \
-    git clone https://github.com/SickChill/SickChill.git /sickchill && \
+    git clone -b ${SCBRANCH} https://github.com/SickChill/SickChill.git /sickchill && \
     cd /sickchill && rm -rf .git tests .github Dockerfile docker-compose.yaml .gitattributes .gitignore .dockerignore .checkignore && \
-    chmod u+x /start.sh /sickupdate && \
-    echo "20  3  *  *  *    /bin/sh /sickupdate > /dev/null" > /etc/crontabs/root && \
+    chmod u+x /start.sh && \
     apk del $buildDeps && \
     rm -rf /tmp/* && \
     rm -rf /var/cache/apk/*
