@@ -6,7 +6,8 @@ Image is created on TinkerBoard, Raspberry Pi, Rock64 or AWS for ARM(64) based s
 
 Versions in latest image
 ---
-The image is based on the latest **[SickChill](https://github.com/SickChill/SickChill "SickChill GitHub")** version. I only updated the settings, to not ignore the german releases (for convenience).
+The image is based on the latest **[SickChill](https://github.com/SickChill/SickChill "SickChill GitHub")** version.    
+I only updated the settings, to not ignore the german releases, and added glotz.info as indexer, if german ENV is set (for convenience).
 
 Start your container
 -----
