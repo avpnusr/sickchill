@@ -520,7 +520,7 @@ class Tvdb:
 
         # The following url_ configs are based of the
         # http://thetvdb.com/wiki/index.php/Programmers_API
-        self.config['base_url'] = "https://www.glotz.info/"
+        self.config['base_url'] = "https://www.glotz.info"
 
         if self.config['search_all_languages']:
             self.config['url_getSeries'] = u"%(base_url)s/api/GetSeries.php" % self.config

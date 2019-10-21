@@ -17,8 +17,10 @@ For **[/incoming/folder]**, you can use the volume, where the files will be stor
 
 For **[/media/folder]**, use the volume, where the postprocessed files will be stored.
 
-You can set the timezone for the container via environment-variable "TZ".
+You can set the timezone for the container via environment-variable "TZ".    
 You can activate support for german releases via the environment-variable "GERMAN".
+
+**Important:** for german airdates, the language of SickChill needs to be set go "German" as well!
 
 ```
 docker run -d \
