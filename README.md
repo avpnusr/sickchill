@@ -27,11 +27,10 @@ docker run -d \
   -v [/cfg+db/location]:/data \
   -v [/incoming/folder]:/incoming \
   -v [/media/folder]:/media \
-  -e UID=[Users UID] \
-  -e GID=[Users GID] \
   -e TZ="Europe/Berlin" \
   -e GERMAN=true \
   -p 8081:8081 \
+  --user=[UID:GID] \
   --name sickchill \
   --restart=unless-stopped avpnusr/sickchill
 ```
