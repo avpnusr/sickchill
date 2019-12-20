@@ -5,7 +5,7 @@ ENV LANG='en_US.UTF-8' \
     LANGUAGE='en_US.UTF-8' \
     TERM='xterm' \
     PYTHONIOENCODING='UTF-8' \
-    SCBRANCH='v2019.11.28-1'
+    SCBRANCH='v2019.12.20-1'
 
 COPY ./start.sh ./__init__.py ./indexer_config.py ./showUpdater.py ./tvdb_api.py /
 
