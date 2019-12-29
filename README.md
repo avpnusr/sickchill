@@ -29,6 +29,8 @@ docker run -d \
   -v [/media/folder]:/media \
   -e TZ="Europe/Berlin" \
   -e GERMAN=true \
+  [-e PUID=<uid> \]
+  [-e PGID=<gid> \]
   -p 8081:8081 \
   --user=[UID:GID] \
   --name sickchill \
