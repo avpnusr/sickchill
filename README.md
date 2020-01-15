@@ -11,6 +11,8 @@ I only updated the settings, to not ignore the german releases, and added glotz.
 
 Start your container
 -----
+**Important:** You should **really** use your own APIKEY from **[glotz.info](https://www.glotz.info)**, they are providing a great service for german airdates!
+
 For **[/cfg+db/location]**, use the volume, where your config-file and the database from SickRage is stored.
 
 For **[/incoming/folder]**, you can use the volume, where the files will be stored, that SickRage should process.
@@ -19,8 +21,9 @@ For **[/media/folder]**, use the volume, where the postprocessed files will be s
 
 You can set the timezone for the container via environment-variable "TZ".    
 You can activate support for german releases via the environment-variable "GERMAN".
+You can set your own glotz.info APIKEY via the environment-variable "APIKEY".
 
-**Important:** for german airdates, the language of SickChill needs to be set go "German" as well!
+**Important:** for german airdates, the language for indexers of SickChill needs to be set to "German / Deutsch" as well!
 
 ```
 docker run -d \
@@ -29,6 +32,7 @@ docker run -d \
   -v [/media/folder]:/media \
   -e TZ="Europe/Berlin" \
   -e GERMAN=true \
+  -e APIKEY=<glotz.info APIKEY> \
   [-e PUID=<uid> \]
   [-e PGID=<gid> \]
   -p 8081:8081 \
