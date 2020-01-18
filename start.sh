@@ -3,12 +3,15 @@
 # checking if environment-variable APIKEY is defined by user if not, standard key is set
 echo "[INFO] Checking for user provided APIKEY"
 if [ -z "$APIKEY" ]; then
-  echo "[WARNING] You did not provide an APIKEY for glotz.info"
+  echo "[WARNING] You did not provide an APIKEY for glotz.info - setting default key"
   echo "[INFO] Please get your own and free APIKEY at https://www.glotz.info"
   APIKEY="2XCPYF1BF492M8CLHUI"
 else
-  sed -i "s/'apikey':.*/'apikey': '${APIKEY}',/g" /indexer_config.py  
+  echo "[INFO] Setting your entered APIKEY: ${APIKEY}"
 fi
+
+# replacing commented out APIKEY with default or user given value
+sed -i "s/'apikey':.*/'apikey': '${APIKEY}',/g" /indexer_config.py  
 
 # checking if environment-variable GERMAN is set, if true the modified files are copied to sickchill folder
 echo "[INFO] Checking if german language is selected"
