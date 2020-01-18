@@ -5,7 +5,7 @@ echo "[INFO] Checking for user provided APIKEY"
 if [ -z "$APIKEY" ]; then
   echo "[WARNING] You did not provide an APIKEY for glotz.info - setting default key"
   echo "[INFO] Please get your own and free APIKEY at https://www.glotz.info"
-  APIKEY="2XCPYF1BF492M8CLHUI"
+  APIKEY="2XCPYF1BF492M8CL"
 else
   echo "[INFO] Setting your entered APIKEY: ${APIKEY}"
 fi
