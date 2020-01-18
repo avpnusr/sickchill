@@ -12,7 +12,7 @@ COPY ./start.sh ./__init__.py ./indexer_config.py ./showUpdater.py ./tvdb_api.py
 RUN buildDeps="gcc python-dev openssl-dev libffi-dev musl-dev py2-pip" && \
     apk --update --no-cache add $buildDeps && \
     apk --update --no-cache add \
-    git python2 tzdata unrar curl nodejs shadow su-exec && \
+    git python2 tzdata unrar curl nodejs shadow su-exec libxslt && \
     pip install --upgrade pip --no-cache-dir && \
     pip install pyopenssl --no-cache-dir && \
     git clone -b ${SCBRANCH} https://github.com/SickChill/SickChill.git /sickchill && \
