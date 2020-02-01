@@ -1,7 +1,7 @@
 ![SickRage Logo](https://user-images.githubusercontent.com/390379/47651259-f1be4000-db3f-11e8-895f-bae17d5ca467.png)
 **SickChill in docker container (german version)**     
+===
 
-====
 Image is created in auto-build for x86 based systems.
 Image is created on TinkerBoard, Raspberry Pi, Rock64 or AWS for ARM(64) based systems.
 
