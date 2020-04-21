@@ -11,6 +11,8 @@ Versions in latest image
 The image is based on the version v2019.09.02-1 of **[SickChill](https://github.com/SickChill/SickChill "SickChill GitHub")**.    
 I only updated some settings, to not ignore the german releases, and added glotz.info as indexer, if german ENV is set (for convenience).
 
+Weekly build from: **21.04.2020**
+
 Start your container
 -----
 **Important:** You should **really** use your own APIKEY from **[glotz.info](https://www.glotz.info)**, they are providing a great service for german airdates!
