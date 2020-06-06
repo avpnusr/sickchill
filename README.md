@@ -13,6 +13,10 @@ I only updated some settings, to not ignore the german releases, and added glotz
 
 Last build is from: **05/06/2020**
 
+Status from last build
+----
+![SickChill Docker Build](https://github.com/avpnusr/sickchill/workflows/SickChill%20Docker%20Build/badge.svg)
+
 Start your container
 -----
 **Important:** You should **really** use your own APIKEY from **[glotz.info](https://www.glotz.info)**, they are providing a great service for german airdates!

@@ -1,4 +1,4 @@
-name: Build SickChill
+name: SickChill Docker Build
 
 on:
   push:
