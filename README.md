@@ -11,7 +11,7 @@ Versions in latest image
 The image is based on the version v2019.09.02-1 of **[SickChill](https://github.com/SickChill/SickChill "SickChill GitHub")**.    
 I only updated some settings, to not ignore the german releases, and added glotz.info as indexer, if german ENV is set (for convenience).
 
-Last build is from: **27/03/2021**
+Last build is from: **03/04/2021**
 
 Status from last build
 ----
