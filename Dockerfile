@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.12
 MAINTAINER avpnusr
 
 ENV LANG='en_US.UTF-8' \
