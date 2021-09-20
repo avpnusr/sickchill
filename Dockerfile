@@ -9,11 +9,12 @@ ENV LANG='en_US.UTF-8' \
 
 COPY ./start.sh ./__init__.py ./indexer_config.py ./showUpdater.py ./tvdb_api.py /
 
-RUN buildDeps="gcc python-dev openssl-dev libffi-dev musl-dev py2-pip py2-setuptools" && \
+RUN buildDeps="gcc python-dev openssl-dev libffi-dev musl-dev py2-setuptools" && \
     apk --update --no-cache add $buildDeps --repository http://dl-3.alpinelinux.org/alpine/v3.11/main/ && \
     apk --update --no-cache add \
     git python2 tzdata unrar curl nodejs shadow su-exec libxslt && \
-#    pip install --upgrade pip --no-cache-dir && \
+    python2 -m ensurepip --upgrade && \
+    pip install --upgrade pip --no-cache-dir && \
     python2 -m pip install pyopenssl --no-cache-dir && \
     git clone -b ${SCBRANCH} https://github.com/SickChill/SickChill.git /sickchill && \
     cd /sickchill && rm -rf .git tests .github Dockerfile docker-compose.yaml .gitattributes .gitignore .dockerignore .checkignore && \
